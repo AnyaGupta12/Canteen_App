@@ -1,0 +1,61 @@
+CREATE TABLE Product(id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+ item_name VARCHAR(100) NOT NULL,
+ item_price INT(50) NOT NULL,
+ item_image VARCHAR(255) NOT NULL,
+item_code VARCHAR(10) NOT NULL);
+
+
+CREATE TABLE Cart(id INT(11) PRIMARY KEY,
+                 item_name VARCHAR(100) NOT NULL,
+                 item_price INT(50) NOT NULL,
+                 item_image VARCHAR(255) NOT NULL,
+                 item_qty INT(10) NOT NULL,
+                 total_price INT(100) NOT NULL,
+                 item_code VARCHAR(10) NOT NULL);
+
+CREATE TABLE orders(id INT(11) AUTO_INCREMENT PRIMARY KEY NOT NULL, 
+                    name VARCHAR(100) NOT NULL,
+                    email VARCHAR(100) NOT NULL,
+                    rollno INT(20) NOT NULL,
+                   phone VARCHAR(20) NOT NULL,
+                   pmode VARCHAR(50) NOT NULL,
+                   items VARCHAR(255) NOT NULL,
+                   amount_paid INT(100) NOT NULL);
+
+CREATE TABLE signupdata (
+    name varchar(255),
+    rollno int NOT NULL PRIMARY KEY,
+    email varchar(255),
+    password varchar(255)
+);
+
+
+INSERT INTO `product`(`id`, `item_name`, `item_price`, `item_image`,`item_code`) VALUES 
+(1,"Gulab Jamun",35,"./Images/gulabjamun.png","i1001"),
+(2,"Ice Cream Bar", 15,"./Images/ice.png","i1002"),
+(3,"Cornetto", 30,"./Images/icecream.png","i1003"),
+(4,"Tea", 15,"./Images/tea.png","i1004"),
+(5,"Coffee", 15,"./Images/coffee.png","i1005"),
+(6,"Buttermilk", 15,"./Images/buttermilk.png","i1006"),
+(7,"Appy fizz", 12,"./Images/appy.png","i1007"),
+(8,"Frooti", 12,"./Images/frooti.png","i1008"),
+(9,"Soft Drink", 20,"./Images/soft.png","i1009"),
+(10,"Lassi", 15,"./Images/lassi.png","i1010"),
+(11,"Chicken Rice", 85,"./Images/ch-rice.png","i1011"),
+(12,"Chicken Noodles", 75,"./Images/ch-noodles.png","i1012"),
+(13,"Chicken Lollipop", 60,"./Images/lollipop.png","i1013"),
+(14,"Chicken Chicken", 65,"./Images/ch-chicken.png","i1014"),
+(15,"Egg Omlet", 35,"./Images/egg.png","i1015"),
+(16,"Chicken Soup", 45,"./Images/ch-soup.png","i1016"),
+(17,"Idli", 30,"./Images/idli.png","i1017"),
+(18,"Masala Dosa", 45,"./Images/dosa.png","i1018"),
+(19,"Uttampam", 40,"./Images/uttapam.png","i1019"),
+(20,"Veg Noodles", 80,"./Images/vegnoodle.png","i1020"),
+(21,"Chilli Paneer", 40,"./Images/chillipaneer.png","i1021"),
+(22,"Veg Fried Rice", 80,"./Images/rice.png","i1022"),
+(23,"Vada Pav", 15,"./Images/img-1.jpg","i1023"),
+(24,"Samosa", 15,"./Images/img-2.jpg","i1024"),
+(25,"Veg Thali", 80,"./Images/img-4.jpg","i1025"),
+(26,"Pav Bhaji", 50,"./Images/img-3.jpg","i1026"),
+(27,"Misal pav", 50,"./Images/Pav_Bhaji.png","i1027"),
+(28,"Veg Manchaow Soup", 50,"./Images/veg-soup.png","i1028");
